@@ -9,20 +9,37 @@ import java.util.*;
         System.out.println("Sum of array elements: " + sum);
     }
 }*/
-class Arrays{
+/*class Arrays{
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         int n=sc.nextInt();
         int[] arr=new int[n];
-        int max=0;
         for(int i=0;i<n;i++){
             arr[i]=sc.nextInt();
         }
-        for(int i=0;i<n;i++){
+            int max=arr[0];
+        for(int i=1;i<n;i++){
             if(arr[i]>max){
                 max=arr[i];
             }
         }
         System.out.println("Maximum element in the array: " + max);
+    }
+}*/
+class Arrays{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int[] arr=new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        int min=arr[0];
+        for(int i=1;i<n;i++){
+            if(arr[i]<min){
+                min=arr[i];
+            }
+        }
+        System.out.println("Minimum element in the array: " + min);
     }
 }
