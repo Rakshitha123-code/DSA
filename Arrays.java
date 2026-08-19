@@ -68,7 +68,7 @@ import java.util.*;
     }
 }*/
 //LINEAR SEARCH IN ARRAY
-class Arrays{
+/*class Arrays{
     public static void main(String[] args)
     {
       Scanner sc=new Scanner(System.in);
@@ -94,5 +94,40 @@ class Arrays{
         System.out.println("Element not found in the array.");
     }
 
+}
+}*/
+// REVERSE AN ARRAY
+class Arrays{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int[]arr=new int[n];
+        for(int i=0;i<arr.length;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        System.out.println("ARRAY IN ORIGINAL ORDER:");
+        for(int i=0;i<arr.length;i++)
+        {
+            System.out.print(arr[i]+" ");
+        }
+        System.out.println();
+        int start=0;
+        int end=arr.length-1;
+
+        while(start<end)
+        {
+            int temp=arr[start];
+            arr[start]=arr[end];
+            arr[end]=temp;
+            start++;
+            end--;
+        }
+        System.out.println("ARRAY IN REVERSE ORDER:");
+        for(int i=0;i<arr.length;i++)
+        {
+            System.out.print(arr[i]+" ");
+        }
 }
 }
