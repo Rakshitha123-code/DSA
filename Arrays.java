@@ -28,7 +28,7 @@ import java.util.*;
         System.out.println("Maximum element in the array: " + max);
     }
 }*/
-// MINIMUM IN ARRAy
+// MINIMUM IN ARRAY
 /*class Arrays{
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
@@ -47,7 +47,7 @@ import java.util.*;
     }
 }*/
 //COUNT OF EVEN AND ODD ELEMENTS IN ARRAY
-class Arrays{
+/*class Arrays{
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         int n=sc.nextInt();
@@ -66,4 +66,33 @@ class Arrays{
         System.out.println("Count of even elements in the array: " + evenCount);
         System.out.println("Count of odd elements in the array: " + oddCount);
     }
+}*/
+//LINEAR SEARCH IN ARRAY
+class Arrays{
+    public static void main(String[] args)
+    {
+      Scanner sc=new Scanner(System.in);
+      int n=sc.nextInt();
+      int[]arr=new int[n];
+      for(int i=0;i<arr.length;i++)
+      {
+        arr[i]=sc.nextInt();
+      }
+      int key=sc.nextInt();
+      int found=0;
+      for(int i=0;i<arr.length;i++)
+      {
+        if(arr[i]==key)
+        {
+            found=1;
+            System.out.println("Element found at index: " + i);
+            break;
+        }
+    }
+    if(found==0)
+    {
+        System.out.println("Element not found in the array.");
+    }
+
+}
 }
