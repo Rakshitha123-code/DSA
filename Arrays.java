@@ -97,7 +97,7 @@ import java.util.*;
 }
 }*/
 // REVERSE AN ARRAY
-class Arrays{
+/*class Arrays{
     public static void main(String[] args)
     {
         Scanner sc=new Scanner(System.in);
@@ -130,4 +130,29 @@ class Arrays{
             System.out.print(arr[i]+" ");
         }
 }
+}*/
+//SECOND LARGEST ELEMENT IN ARRAY
+import java.util.*;
+class Arrays{
+    public static void main(String[] args)
+    {
+      Scanner sc=new Scanner(System.in);
+      int n=sc.nextInt();
+      int arr[]=new int[n];
+      for(int i=0;i<arr.length;i++)
+      {
+        arr[i]=sc.nextInt();
+      }
+      int slargest=0;
+      int max=arr[0];
+      for(int i=1;i<arr.length;i++)
+      {
+        if(arr[i]>max)
+        {
+           slargest=max;
+           max=arr[i];
+        }
+      }
+      System.out.println("Second largest element in the array: " + slargest);
+    }
 }
