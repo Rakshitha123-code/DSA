@@ -143,7 +143,7 @@ class Arrays{
       {
         arr[i]=sc.nextInt();
       }
-      int slargest=0;
+      int slargest=Integer.MIN_VALUE;;
       int max=arr[0];
       for(int i=1;i<arr.length;i++)
       {
@@ -151,6 +151,18 @@ class Arrays{
         {
            slargest=max;
            max=arr[i];
+        }
+        else if(arr[i]>slargest && arr[i]!=max)
+        {
+            slargest=arr[i];
+        }
+        else if(arr[i]==max)
+        {
+            continue;
+        }
+        else
+        {
+            continue;
         }
       }
       System.out.println("Second largest element in the array: " + slargest);
