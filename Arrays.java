@@ -132,7 +132,7 @@ import java.util.*;
 }
 }*/
 //SECOND LARGEST ELEMENT IN ARRAY
-import java.util.*;
+/*import java.util.*;
 class Arrays{
     public static void main(String[] args)
     {
@@ -166,5 +166,35 @@ class Arrays{
         }
       }
       System.out.println("Second largest element in the array: " + slargest);
+    }
+}*/
+// CHECK IF ARRAY IS SORTED OR NOT
+class Arrays{
+    public static void main(String[] args)
+    {
+      Scanner sc=new Scanner(System.in);
+      int n=sc.nextInt();
+      int arr[]=new int[n];
+      for(int i=0;i<arr.length;i++)
+      {
+        arr[i]=sc.nextInt();
+      }
+      boolean isSorted=true;
+      for(int i=0;i<arr.length-1;i++)
+      {
+        if(arr[i]>arr[i+1])
+        {
+            isSorted=false;
+            break;
+        }
+      }
+      if(isSorted)
+      {
+        System.out.println("The array is sorted in ascending order.");
+      }
+      else
+      {
+        System.out.println("The array is not sorted in ascending order.");
+      }
     }
 }
