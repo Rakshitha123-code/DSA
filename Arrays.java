@@ -169,7 +169,7 @@ class Arrays{
     }
 }*/
 // CHECK IF ARRAY IS SORTED OR NOT
-class Arrays{
+/*class Arrays{
     public static void main(String[] args)
     {
       Scanner sc=new Scanner(System.in);
@@ -196,5 +196,37 @@ class Arrays{
       {
         System.out.println("The array is not sorted in ascending order.");
       }
+    }
+}*/
+//
+// REMOVE DUPLICATES FROM SORTED ARRAY
+import java.util.*;
+class Arrays{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<arr.length;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        int i=0;
+        for(int j=0;j<arr.length;j++)
+        {
+            if(arr[i]!=arr[j])
+            {
+                i++;
+                arr[i]=arr[j];
+            }
+            else
+            {
+                continue;
+            }
+        }
+        System.out.println("AFTER REMOVING DUPLICATES:");
+        for(int k=0;k<=i;k++)
+        {
+            System.out.print(arr[k]+" ");
+        }
     }
 }
