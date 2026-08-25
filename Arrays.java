@@ -231,8 +231,8 @@ class Arrays{
     }
 }
 */
-// ROTATE AN ARRAY 
-class Arrays{
+// ROTATE AN ARRAY  BY ONE
+/*class Arrays{
     public static void main(String[] args) {
             
         Scanner sc=new Scanner(System.in);
@@ -247,11 +247,52 @@ class Arrays{
         {
             arr[i]=arr[i-1];
         }
+
         arr[0]=temp;
         System.out.println("AFTER ROTATING THE ARRAY:");
         for(int i=0;i<arr.length;i++)
         {
             System.out.print(arr[i]+" ");
         }
+    }
+}*/
+// ROTATE ARRY BY K TIMES
+class Arrays{
+    static void reverse(int arr[],int start,int end)
+    {
+        while(start<end)
+        {
+            int temp=arr[start];
+            arr[start]=arr[end];
+            arr[end]=temp;
+            start++;
+            end--;
+        }
+    }
+static void rotate(int arr[],int k)
+{
+    k=k%arr.length;
+    if(k<0)
+    {
+        k=k+arr.length;
+    }
+    reverse(arr,0,arr.length-1);
+    reverse(arr,0,k-1);
+    reverse(arr,k,arr.length-1);
+}
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<arr.length;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        int k=sc.nextInt();
+        rotate(arr,k);  
+        System.out.println("AFTER ROTATING THE ARRAY BY " + k + " TIMES:");
+        for(int i=0;i<arr.length;i++)   {
+            System.out.println(arr[i]);
+        }      
     }
 }
