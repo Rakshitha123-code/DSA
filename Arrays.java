@@ -257,7 +257,7 @@ class Arrays{
     }
 }*/
 // ROTATE ARRY BY K TIMES
-class Arrays{
+/*class Arrays{
     static void reverse(int arr[],int start,int end)
     {
         while(start<end)
@@ -295,4 +295,67 @@ static void rotate(int arr[],int k)
             System.out.println(arr[i]);
         }      
     }
+}*/
+// MOVE 0'S TO END OF ARRAY
+/*import java.util.*;
+class Arrays{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<arr.length;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        int z=0;  // points to zero elemnt 
+        int nz=0;   // points to nonzero element
+        for(int i=0;i<arr.length;i++)
+        {
+            if(arr[i]!=0)
+            {
+                nz++;
+            }
+            else{
+                int temp=arr[nz];
+                arr[nz]=arr[z];
+                arr[z]=temp;
+                z++;
+                nz++;
+            }
+
+        }
+        System.out.println("ARRAY AFTER MOVING 0'S TO END:");
+        for(int i=0;i<arr.length;i++)
+        {
+            System.out.print(arr[i]+" ");
+        }
+        
+    }
+}*/
+// FIND MISSING NUMBER IN ARRAY
+import java.util.*;
+class Arrays{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<arr.length;i++)  
+            {
+                arr[i]=sc.nextInt();
+            } 
+            int sum=0;
+            for(int i=0;i<arr.length;i++)
+                {
+                    sum+=arr[i];
+                }   
+                int totalsum=(n*(n+1))/2 ;
+                int missing=totalsum-sum;
+                System.out.println(missing);  
+
+                
+        
+
+        
+    }        
+    
 }
