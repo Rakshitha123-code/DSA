@@ -360,7 +360,7 @@ class Arrays{
     
 }*/
 // FIND DUPLICATE ELEMENTS IN ARRAY
-import java.util.*;
+/*import java.util.*;
 class Arrays{
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
@@ -381,5 +381,39 @@ class Arrays{
             }
         }
 
+    }
+}*/
+// MAJORITY ELEMET IN ARRAY
+import java.util.*;
+class Arrays{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        int i;
+        for( i=0;i<arr.length;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+         
+         for( i=0;i<arr.length;i++)
+            {
+                int count=0;
+                for(int j=i+1;j<arr.length;j++)
+                {
+                if(arr[i]==arr[j])
+                {
+                    count++;
+                }
+            }
+                if(count>(arr.length)/2)
+                {
+                    System.out.println("MAJORITY ELEMENT IS:"+arr[i]);
+                    break;
+                }
+                
+                
+            }
+            
     }
 }
