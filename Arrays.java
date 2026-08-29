@@ -418,7 +418,7 @@ class Arrays{
     }
 }*/
 // FREQUENCY OF AN ELEMENT
-import java.util.*;
+/*import java.util.*;
 class Arrays{
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
@@ -438,5 +438,29 @@ class Arrays{
             }
         }
         System.out.println("Total Occurences of"+ " "+key +" is"+" "+count);
+    }
+}*/
+//  ALL OCCURENCES OF AN ELEMENT
+import java.util.*;
+class Arrays{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<arr.length;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        int key=sc.nextInt();
+        for(int i=0;i<arr.length;i++)
+        {
+            if(arr[i]==key)
+            {
+                System.out.println(key +" is in index: "+ i);
+            }
+            else{
+                continue;
+            }
+        }
     }
 }
