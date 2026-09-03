@@ -417,6 +417,39 @@ class Arrays{
             
     }
 }*/
+// MAJORITY ELEMENT IN ARRAY USING SORTING
+import java.util.*; 
+class Arrays{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<arr.length;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        Arrays.sort(arr);
+        int count=1;
+        for(int i=1;i<arr.length;i++)
+        {
+            if(arr[i]==arr[i-1])
+            {
+                count++;
+            }
+            else
+            {
+                count=1;
+            }
+            if(count>arr.length/2)
+            {
+                System.out.println("MAJORITY ELEMENT IS:"+arr[i]);
+                break;
+            }
+        }
+    }
+}
+  
+
 // FREQUENCY OF AN ELEMENT
 /*import java.util.*;
 class Arrays{
@@ -492,14 +525,14 @@ class Arrays{
     }
 }*/
 //INTERSECTION OF TWO ARRAYS
-import java.util.*;
+/*import java.util.*;
 public class Arrays{
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         int n=sc.nextInt();
         int m=sc.nextInt();
         int arr1[]=new int[n];
-        int arr2[]=new int[n];
+        int arr2[]=new int[m];
         for(int i=0;i<n;i++)
         {
             arr1[i]=sc.nextInt();
@@ -508,15 +541,24 @@ public class Arrays{
         {
             arr2[i]=sc.nextInt();
         }
-        for(int i=0;i<arr1.length;i++)
+        int i;
+        for( i=0;i<arr1.length;i++)
         {
+            int found=0;
             for(int j=0;j<arr2.length;j++)
             {
                 if(arr1[i]==arr2[j])
                 {
-                     System.out.println("INTERSECTION ELEMENTS ARE :"+arr1[i]);
+                     found=1;
+                    break;
                 }
             }
+            if(found==1)
+            {
+             System.out.println("DUPLICATE ELMENT IS:"+arr1[i]);
+            }
         }
+            
     }
-}
+}*/
+
