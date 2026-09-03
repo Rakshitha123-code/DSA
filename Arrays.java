@@ -418,7 +418,7 @@ class Arrays{
     }
 }*/
 // MAJORITY ELEMENT IN ARRAY USING SORTING
-import java.util.*; 
+/*import java.util.*; 
 class Arrays{
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
@@ -446,6 +446,54 @@ class Arrays{
                 break;
             }
         }
+    }
+}*/
+// MAJORITY ELEMENT IN AN ARRAY USING MOORE'S ALGORITHM
+import java.util.*;
+class Arrays{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        int freq=0;
+        int ans=0;
+        for(int i=0;i<arr.length;i++)
+        {
+            if(freq==0)
+            {
+                ans=arr[i];
+            }
+            if(ans==arr[i])
+            {
+                freq++;
+            }
+            else
+            {
+                freq--;
+            }
+            
+        }
+        freq=0;
+        for(int i=0;i<arr.length;i++)
+        {
+            if(arr[i]==ans)
+            {
+                freq++;
+            }
+        }
+        if(freq>arr.length/2)
+            {
+                System.out.println("Majority element is:"+ans);
+            }
+            else
+            {
+                System.out.println("No majority element found.");
+            }
+        
     }
 }
   
