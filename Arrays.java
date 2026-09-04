@@ -383,6 +383,7 @@ class Arrays{
 
     }
 }*/
+// 
 // MAJORITY ELEMET IN ARRAY
 /*import java.util.*;
 class Arrays{
@@ -449,7 +450,7 @@ class Arrays{
     }
 }*/
 // MAJORITY ELEMENT IN AN ARRAY USING MOORE'S ALGORITHM
-import java.util.*;
+/*import java.util.*;
 class Arrays{
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
@@ -495,7 +496,8 @@ class Arrays{
             }
         
     }
-}
+}*/
+
   
 
 // FREQUENCY OF AN ELEMENT
@@ -609,4 +611,67 @@ public class Arrays{
             
     }
 }*/
+// UNION OF TWO ARRAYS
+import java.util.*;
+public class Arrays{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int m=sc.nextInt();
+        int arr1[]=new int[n];
+        int arr2[]=new int[m];
+        
+        for(int i=0;i<n;i++)
+        {
+            arr1[i]=sc.nextInt();
+        }
+        for(int i=0;i<m;i++)
+        {
+            arr2[i]=sc.nextInt();
+        }
+        int result[]=new int[n+m];
+        int k=0;
+        for(int i=0;i<n;i++)
+            {
+                boolean found=false;
+                for(int j=0;j<k;j++)
+                {
+                    if(arr1[i]==result[j])
+                    {
+                        found=true;
+                        break;
+                    }
+                }
+                if(!found)
+                {
+                    result[k]=arr1[i];
+                    k++;
+                }
+             }
+             for(int i=0;i<m;i++)
+            {
+                boolean found=false;
+                for(int j=0;j<k;j++)
+                {
+                    if(arr2[i]==result[j])
+                    {
+                        found=true;
+                        break;
+                    }
+                }
+                if(!found)
+                {
+                    result[k]=arr2[i];
+                    k++;
+                }
+             }
+             for(int i=0;i<k;i++)
+             {
+                System.out.print(result[i]+" ");
+             }
+             
+            }   
+    }
+
+
 
