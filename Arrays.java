@@ -612,7 +612,7 @@ public class Arrays{
     }
 }*/
 // UNION OF TWO ARRAYS
-import java.util.*;
+/*import java.util.*;
 public class Arrays{
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
@@ -671,7 +671,47 @@ public class Arrays{
              }
              
             }   
-    }
+    }*/
+   // FINDING LEADER IN AN ARRAY
+   import java.util.*;
+   class Arrays{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        for(int i=0;i<arr.length;i++)
+        {
+             if(i==arr.length-1)
+                {
+                    System.out.println("LEADER IS:"+arr[i]);
+                }
+                else{
+                        for(int j=i+1;j<arr.length;j++)
+                          {
+                             if(arr[i]<arr[j])
+                             {
+                                break;
+                             }
+                                else if(j==arr.length-1)
+                                {
+                                    System.out.println("LEADER IS:"+arr[i]);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+                
+                
+                
+                
+            
+        
+    
 
 
 
