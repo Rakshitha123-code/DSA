@@ -706,7 +706,7 @@ public class Arrays{
             }
         }*/
        // MAXIMUM CONSECUTIVE 1'S IN AN ARRAY
-       import java.util.*;
+      /*  import java.util.*;
        class Arrays{
         public static void main(String[] args) {   
            Scanner sc=new Scanner(System.in);
@@ -739,7 +739,41 @@ public class Arrays{
 
 
         }
-       }
+       }*/
+      // FIND BUY AND SELL STOCKS TO MAXIMIZE PROFIT
+      import java.util.*;
+      class Arrays{
+        public static void main(String[] args) {
+            Scanner sc=new Scanner(System.in);
+            int n=sc.nextInt();
+            int arr[]=new int[n];
+            for(int i=0;i<arr.length;i++)
+            {
+                arr[i]=sc.nextInt();
+            }
+            int minPrice=arr[0];
+            int maxProfit=0;
+            for(int i=1;i<arr.length;i++)
+            {
+                if(arr[i]<minPrice)
+                {
+                    minPrice=arr[i];
+                }
+                else
+                {
+                    int profit=arr[i]-minPrice;
+                    if(profit>maxProfit)
+                    {
+                        maxProfit=profit;
+                    }
+                }
+            }
+
+            System.out.println("MAXIMUM PROFIT IS:"+maxProfit);
+        
+      }
+    }
+
                 
                 
                 
