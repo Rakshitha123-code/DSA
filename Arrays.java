@@ -850,7 +850,7 @@ class Arrays{
 //CHECK PALINDROME USING TWO POINTERS
 //[1,2,3,2,1]------ IS PALINDROME
 //[1,2,3,4,2,1]------ IS  NOT A PALINDROME
-import java.util.*;
+/*import java.util.*;
 class Arrays{
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
@@ -868,6 +868,7 @@ class Arrays{
             if(arr[left]!=arr[right])
             {
                 ispalindrome=false;
+                break;
             }
             left++;
             right--;
@@ -881,7 +882,48 @@ class Arrays{
             System.out.println("ARRAY IS NOT A PALINDROME");
         }
     }
+}*/
+//two pair sum using two pointer approach---------> works only for sorted array 
+import java.util.*;
+class Twopointer{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int target=sc.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<arr.length;i++)
+        {
+          arr[i]=sc.nextInt();
+        }
+        Arrays.sort(arr);
+        int left=0;
+        int right=arr.length-1;
+        while(left<right)
+        {
+            int sum=arr[left]+arr[right];
+            if(sum<target)
+            {
+                left++;
+                
+            }
+            else if(sum>target)
+            {
+                right--;
+               
+            }
+            else
+            {
+                System.out.println("Pair: " + arr[left] + " " + arr[right]);
+                break;             
+               
+
+            }
+        }
+        
+    }
 }
+
+
 
 
        
