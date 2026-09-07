@@ -813,7 +813,7 @@ public class Arrays{
     }
 }*/
 // REVERSING USING TWO POINTER APPROACH
-import java.util.*;
+/*import java.util.*;
 class Arrays{
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
@@ -846,7 +846,44 @@ class Arrays{
 
     }
 
+}*/
+//CHECK PALINDROME USING TWO POINTERS
+//[1,2,3,2,1]------ IS PALINDROME
+//[1,2,3,4,2,1]------ IS  NOT A PALINDROME
+import java.util.*;
+class Arrays{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<arr.length;i++)
+        {
+          arr[i]=sc.nextInt();
+        }
+        int left=0;
+        int right=arr.length-1;
+        boolean ispalindrome=true;
+        while(left<=right)
+        {
+            if(arr[left]!=arr[right])
+            {
+                ispalindrome=false;
+            }
+            left++;
+            right--;
+        }
+        if(ispalindrome)
+        {
+            System.out.println("ARRAY IS PALINDROME");
+        }
+        else
+        {
+            System.out.println("ARRAY IS NOT A PALINDROME");
+        }
+    }
 }
+
+
        
 
 
