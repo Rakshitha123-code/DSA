@@ -741,7 +741,7 @@ public class Arrays{
         }
        }*/
       // FIND BUY AND SELL STOCKS TO MAXIMIZE PROFIT
-      import java.util.*;
+      /*import java.util.*;
       class Arrays{
         public static void main(String[] args) {
             Scanner sc=new Scanner(System.in);
@@ -772,7 +772,85 @@ public class Arrays{
             System.out.println("MAXIMUM PROFIT IS:"+maxProfit);
         
       }
+    }*/
+   // positive and negative alternatives
+   /*class Arrays{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<arr.length;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        int pos[]=new int[n];
+        int neg[]=new int[n];
+        int p=0;
+        int ne=0;
+        for(int i=0;i<arr.length;i++)
+        {
+            if(arr[i]>=0)
+            {
+                pos[p]=arr[i];
+                p++;
+            }
+            else
+            {
+                neg[ne]=arr[i];
+                ne++;
+            }
+        }
+        int result[]=new int[n];
+        int i=0;
+        int j=0;
+        int k=0;
+        for(i=0;i<p && i<ne;i++)
+        {
+            result[k]=arr[i];
+            k++;
+            
+
     }
+}*/
+// REVERSING USING TWO POINTER APPROACH
+import java.util.*;
+class Arrays{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<arr.length;i++)
+        {
+          arr[i]=sc.nextInt();
+        }
+        System.out.println("ARRAY IN CORRECT ORDER:");
+        for(int i=0;i<arr.length;i++)
+        {
+            System.out.println(arr[i]);
+        }
+        int left=0;
+        int right=arr.length-1;
+        while(left<=right)
+        {
+            int temp=arr[left];
+            arr[left]=arr[right];
+            arr[right]=temp;
+            left++;
+            right--;
+        }System.out.println("ARRAY IN REVERSE ORDER:");
+        for(int i=0;i<arr.length;i++)
+        {
+            System.out.println(arr[i]);
+        }
+
+
+    }
+
+}
+       
+
+
+   
 
                 
                 
