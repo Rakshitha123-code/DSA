@@ -962,7 +962,55 @@ class Arrays{
         
     }
 }*/
-//
+// find unique pairs
+import java.util.*;
+class Arrays{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int target=sc.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<arr.length;i++)
+        {
+          arr[i]=sc.nextInt();
+        }
+        Arrays.sort(arr);
+        int left=0;
+        int right=arr.length-1;
+        while(left<right)
+        {
+            int sum=arr[left]+arr[right];
+            if(sum<target)
+            {
+                left++;
+                
+            }
+            else if(sum>target)
+            {
+                right--;
+               
+            }
+            else
+            {
+                System.out.println("Pair: " + arr[left] + " " + arr[right]);
+                left++;
+                right--;  
+                while(left<right && arr[left]==arr[left-1])   
+                    {
+                        left++;
+                    } 
+                     while(left<right && arr[right]==arr[right-1])   
+                    {
+                        right--;
+                    }       
+               
+
+            }
+        }
+        
+    }
+}
+
 
 
 
