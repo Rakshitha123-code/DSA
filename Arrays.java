@@ -1021,7 +1021,7 @@ class Arrays{
     }
 }*/
 // three sum
-import java.util.*;
+/*import java.util.*;
 class Oop{
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
@@ -1060,6 +1060,62 @@ class Oop{
                 left++;
                 right--;
                
+
+            }
+                }
+        }
+    
+        
+    }
+}*/
+// 3 sum with duplicates
+import java.util.*;
+class Oop{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int target=sc.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<arr.length;i++)
+        {
+          arr[i]=sc.nextInt();
+        }
+          Arrays.sort(arr);
+       
+         for(  int i=0;i<arr.length;i++)
+                {
+                    int f=arr[i];
+                    int left=i+1;
+                    int right=arr.length-1;
+              while(left<right)
+              {
+           
+                
+            int sum=arr[left]+arr[right]+f;
+            if(sum<target)
+            {
+                left++;
+                
+            }
+            else if(sum>target)
+            {
+                right--;
+               
+            }
+            else
+            {
+                System.out.println("Pair: " + arr[left] + " " + arr[right] + " " +                                 f);
+                left++;
+                right--;
+               while(left < right && arr[left] == arr[left - 1])
+                {
+                  left++;
+                     }
+
+                while(left < right && arr[right] == arr[right + 1])
+               {
+                    right--;
+               }
 
             }
                 }
